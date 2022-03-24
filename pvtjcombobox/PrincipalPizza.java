@@ -49,8 +49,6 @@ public class PrincipalPizza extends javax.swing.JFrame {
             }
         });
 
-        ComboPizza.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         BotaoExcluir.setText("Excluir");
         BotaoExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

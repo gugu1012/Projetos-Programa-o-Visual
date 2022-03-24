@@ -117,11 +117,16 @@ public class PrincipalPizza extends javax.swing.JFrame {
         Pizza pizza = new Pizza(
                 CampoSabor.getText(), 
                 Double.parseDouble(CampoValor.getText()));
-                modeloPizza.addElement(pizza);// adiciona o obj "pizza" dentro da lista modeloPizza
+                modeloPizza.addElement(pizza);// adiciona o obj "pizza" dentro da lista modeloPizza  
+                
+                CampoSabor.setText("");// limpa o capo sabor
+                CampoValor.setText("");// limpa o campo valor
     }//GEN-LAST:event_BotaoEnviarActionPerformed
 
     private void BotaoExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoExcluirActionPerformed
-        // TODO add your handling code here:
+        if(ComboPizza.getSelectedIndex() != -1){
+            modeloPizza.removeElementAt(ComboPizza.getSelectedIndex());
+        }
     }//GEN-LAST:event_BotaoExcluirActionPerformed
 
     /**

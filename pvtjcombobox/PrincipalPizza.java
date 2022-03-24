@@ -6,6 +6,7 @@
 package pvtjcombobox;
 
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -58,6 +59,11 @@ public class PrincipalPizza extends javax.swing.JFrame {
         });
 
         BotaoDetalhar.setText("Detalhes");
+        BotaoDetalhar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoDetalharActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -128,6 +134,14 @@ public class PrincipalPizza extends javax.swing.JFrame {
             modeloPizza.removeElementAt(ComboPizza.getSelectedIndex());
         }
     }//GEN-LAST:event_BotaoExcluirActionPerformed
+
+    private void BotaoDetalharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoDetalharActionPerformed
+        if(ComboPizza.getSelectedIndex() != -1){
+            Pizza p = (Pizza) ComboPizza.getSelectedItem();
+            String texto = "Sabor: " + p.getSabor() + "\nValor: " + p.getValor();
+            JOptionPane.showMessageDialog(this, texto);
+        }
+    }//GEN-LAST:event_BotaoDetalharActionPerformed
 
     /**
      * @param args the command line arguments

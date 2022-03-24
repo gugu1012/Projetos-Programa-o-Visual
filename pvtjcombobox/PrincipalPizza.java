@@ -5,15 +5,14 @@
  */
 package pvtjcombobox;
 
+import javax.swing.DefaultComboBoxModel;
+
 /**
  *
  * @author thais
  */
 public class PrincipalPizza extends javax.swing.JFrame {
-
-    /**
-     * Creates new form Principal
-     */
+    private DefaultComboBoxModel<Pizza> modeloPizza;
     public PrincipalPizza() {
         initComponents();
     }
@@ -32,7 +31,7 @@ public class PrincipalPizza extends javax.swing.JFrame {
         CampoSabor = new javax.swing.JTextField();
         CampoValor = new javax.swing.JTextField();
         BotaoEnviar = new javax.swing.JToggleButton();
-        ComboPizza = new javax.swing.JComboBox<>();
+        ComboPizza = new javax.swing.JComboBox();
         BotaoExcluir = new javax.swing.JButton();
         BotaoDetalhar = new javax.swing.JButton();
 
@@ -162,7 +161,7 @@ public class PrincipalPizza extends javax.swing.JFrame {
     private javax.swing.JButton BotaoExcluir;
     private javax.swing.JTextField CampoSabor;
     private javax.swing.JTextField CampoValor;
-    private javax.swing.JComboBox<String> ComboPizza;
+    private javax.swing.JComboBox ComboPizza;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables

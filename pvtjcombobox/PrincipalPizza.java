@@ -114,7 +114,10 @@ public class PrincipalPizza extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotaoEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoEnviarActionPerformed
-        // TODO add your handling code here:
+        Pizza pizza = new Pizza(
+                CampoSabor.getText(), 
+                Double.parseDouble(CampoValor.getText()));
+                modeloPizza.addElement(pizza);// adiciona o obj "pizza" dentro da lista modeloPizza
     }//GEN-LAST:event_BotaoEnviarActionPerformed
 
     private void BotaoExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoExcluirActionPerformed

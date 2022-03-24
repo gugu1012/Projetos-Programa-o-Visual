@@ -15,6 +15,8 @@ public class PrincipalPizza extends javax.swing.JFrame {
     private DefaultComboBoxModel<Pizza> modeloPizza;
     public PrincipalPizza() {
         initComponents();
+        modeloPizza = new DefaultComboBoxModel<>();
+        ComboPizza.setModel(modeloPizza);
     }
 
     /**
@@ -165,4 +167,6 @@ public class PrincipalPizza extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
+
+
 }
